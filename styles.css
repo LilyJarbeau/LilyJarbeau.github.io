@@ -1,0 +1,70 @@
+h2 {
+    color: #000000;
+    text-align: center;
+    font-size: 30px;
+}
+
+.header {
+  padding: 80px; /* some padding */
+  text-align: center; /* center the text */
+  background: #1abc9c; /* green background */
+  color: white; /* white text color */
+}
+
+/* Increase the font size of the <h1> element */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Root selector for defining global CSS variables */
+:root {
+  --clr-dark: #333;  /* Dark color for text in light mode, background in dark mode */
+  --clr-light: #fff; /* Light color for background in light mode, text in dark mode */
+}
+/* Base styles for the body */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+    transition: background-color 0.3s, color 0.3s;
+}
+/* Container for centering content */
+.container {
+    text-align: center;
+}
+/* Heading styles */
+h1 {
+    margin-bottom: 20px;
+}
+/* Styles for dark mode */
+.dark-mode {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+}
+/* Styles for the toggle container */
+.toggle-container {
+    cursor: pointer;
+}
+/* Styles for the sun and moon icons */
+.sun-icon, .moon-icon {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s;
+}
+/* Hide moon icon by default (light mode) */
+.moon-icon {
+    display: none;
+}
+/* Show moon icon and hide sun icon in dark mode */
+.dark-mode .sun-icon {
+    display: none;
+}
+.dark-mode .moon-icon {
+    display: inline-block;
+}
+
